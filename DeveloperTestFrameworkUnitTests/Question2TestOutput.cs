@@ -228,6 +228,7 @@ namespace DeveloperTestFramework
 
                 lock (_padlock)
                 {
+                    //TODO: shouldn't be increment here? It always overrides result, which means we have to override the whole collection each 10 sec instead of accumulating result
                     _results[wordCount.Word] = wordCount.Count;
                 }
             }
